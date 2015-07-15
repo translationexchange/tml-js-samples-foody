@@ -14,6 +14,6 @@
     "morgan": "~1.0.0",
     "static-favicon": "~1.0.0",
     "tml-express": "^0.1.5",
-    "memcache": "latest"
+    "memcached": "latest"
   }
 }
