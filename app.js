@@ -24,8 +24,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07", {
 
+  cache: {
+    adapter: "memcache",
+    hosts: ["172.31.30.155:11211"],
+    namespace: "573d1cb5d"
+  }
+
 //app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
-//  host: "http://localhost:3000"
+//  host: "http://localhost:3000",
+//
+//  cache: {
+//    adapter: "memcache",
+//    hosts: ["localhost:11211"],
+//    namespace: "10378fe12"
+//  }
 
   //current_locale: 'fr',
   //current_locale: function(request) {
