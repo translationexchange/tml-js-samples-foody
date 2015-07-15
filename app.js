@@ -22,13 +22,17 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
-  host: "http://localhost:3000"
+app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07", {
+
+//app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
+//  host: "http://localhost:3000"
 
   //current_locale: 'fr',
   //current_locale: function(request) {
   //  return 'fr';
   //},
+
+
 
   //current_source: {
   //  "recipe\\/[\\d]+$": 'current'
