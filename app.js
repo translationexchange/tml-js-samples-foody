@@ -32,7 +32,7 @@ app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e
 
   cache: {
     adapter: "memcache",
-    hosts: ["172.31.30.155:11211"],
+    hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
     namespace: "573d1cb5d"
   }
 
