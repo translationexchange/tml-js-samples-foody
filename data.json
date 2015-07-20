@@ -1,6 +1,10 @@
 {
   "categories":[
     {
+      "id": "itai",
+      "name": "gendler"
+    },
+    {
       "id":"salad",
       "name":"Salads"
     },
