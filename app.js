@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+/*
 app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07", {
 
   //cache: {
@@ -34,7 +34,7 @@ app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e
     adapter: "memcache",
     hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
     namespace: "573d1cb5d"
-  }
+  }*/
 
 //app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
 //  host: "http://localhost:3000",
