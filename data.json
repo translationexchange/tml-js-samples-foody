@@ -5,6 +5,10 @@
       "name":"Salads"
     },
     {
+      "id":"companies",
+      "name":"Codefresh"
+    },
+    {
       "id":"fish",
       "name":"Fish"
     },
