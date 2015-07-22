@@ -24,45 +24,53 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07", {
 
-  //cache: {
-  //  adapter: "memcache",
-  //  hosts: ["localhost:11211"],
-  //  namespace: "573d1cb5d"
-  //}
-
   cache: {
     adapter: "memcache",
-    hosts: ["172.31.30.155:11211"],
+    hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
     namespace: "573d1cb5d"
   }
 
-//app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
+  //cache: {
+  //  adapter: "memcache",
+  //  hosts: ["172.31.30.155:11211"],
+  //  namespace: "573d1cb5d"
+  //}
+
+//app.use(tml.init("f66ef4cd81effb479a25c19280fda494b4efc183d8aa463222071d15d40fb909", {
 //  host: "http://localhost:3000",
-//
-//  cache: {
-//    adapter: "memcache",
-//    hosts: ["localhost:11211"],
-//    namespace: "10378fe12"
-//  }
+
+  //cache: {
+  //  adapter: "memcache",
+  //  hosts: ["localhost:11211"],
+  //  namespace: "f66ef4cd81effb479a25c19280fda494b4efc183d8aa463222071d15d40fb909"
+  //}
 
   //current_locale: 'fr',
   //current_locale: function(request) {
   //  return 'fr';
   //},
 
+  //current_source: function() {
+  //  window.location......
+  //}
+
+
+  // DYNAMIC SOURCES - BASED on PATH or CLASS NAME
+
+
   //current_source: {
   //  "recipe\\/[\\d]+$": 'current'
   //}
-
+  //
   //current_source: function(request) {
   //  if (request.url.indexOf('profile/')) {
   //    return 'profile/view';
   //  }
   //  // return utils.normalizeSource(request.url);
   //},
-
+  //
   //current_source: "BLA",
-
+  //
   //current_source: {
   //  'recipe/:id': 'recipe/view'
   //},
@@ -71,7 +79,6 @@ app.use(tml.init("573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e
   //  return;
   //}
 }));
-
 
 app.use('/', routes);
 
