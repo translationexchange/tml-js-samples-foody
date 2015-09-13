@@ -22,23 +22,33 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(tml.init("9dfdebc0c61063c2768bc9bf6b13e5aa58221e737337f9a0c14b82d1c88ce5ff", {
+app.use(tml.init({
+  host:   "https://staging-api.translationexchange.com",
+  key:    "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1",
+  token:  "573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07",
+  //debug:  true,
+
+  agent: {
+    enabled:  true,
+    type:     "tools",
+    version:  "stable",
+    domains:  {
+      api:   "https://staging-api.translationexchange.com",
+      tools: "https://staging-translation-center.translationexchange.com"
+    }
+  },
 
   cache: {
     adapter: "memcache",
     hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
-    namespace: "9dfdebc"
+    namespace: "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1"
   }
 
-//app.use(tml.init("10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418", {
-//  host: "http://localhost:3000"
-
-//
-//  cache: {
-//    adapter: "memcache",
-//    hosts: ["localhost:11211"],
-//    namespace: "10378fe12f942b104cb00890255dae915f2bc2a4f8ba467a70e3d7d6801cb418"
-//  }
+  //cache: {
+  //  adapter: "memcache",
+  //  hosts: ["localhost:11211"],
+  //  namespace: "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1"
+  //}
 
   //current_locale: 'fr',
   //current_locale: function(request) {
@@ -49,9 +59,7 @@ app.use(tml.init("9dfdebc0c61063c2768bc9bf6b13e5aa58221e737337f9a0c14b82d1c88ce5
   //  window.location......
   //}
 
-
   // DYNAMIC SOURCES - BASED on PATH or CLASS NAME
-
 
   //current_source: {
   //  "recipe\\/[\\d]+$": 'current'
@@ -73,6 +81,7 @@ app.use(tml.init("9dfdebc0c61063c2768bc9bf6b13e5aa58221e737337f9a0c14b82d1c88ce5
   //current_user: function(request) {
   //  return;
   //}
+
 }));
 
 app.use('/', routes);
