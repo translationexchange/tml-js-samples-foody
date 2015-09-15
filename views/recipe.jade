@@ -29,5 +29,6 @@ block content
                         each ingredient in recipe.ingredients
                           tr
                             td
-                              != trh("<span style='font-weight: bold; color: black'>" + ingredient.quantity + " " + (ingredient.measurements ? ingredient.measurements : '') + "</span> " + ingredient.name)
+                              != tr(ingredient.quantity + " " + (ingredient.measurements ? ingredient.measurements : '') + " " + ingredient.name)
+                              //!= trh("<span style='font-weight: bold; color: black'>" + ingredient.quantity + " " + (ingredient.measurements ? ingredient.measurements : '') + "</span> " + ingredient.name)
 
