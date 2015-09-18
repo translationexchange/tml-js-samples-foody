@@ -22,10 +22,16 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(tml.init({
-  host:   "https://staging-api.translationexchange.com",
-  key:    "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1",
-  token:  "573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07",
+app.use(tml.init("573d1cbe5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07", {
+
+ host:   "https://staging-api.translationexchange.com",
+//key:    "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1",
+//token:  "573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07",
+
+//app.use(tml.init({
+//  host:   "https://staging-api.translationexchange.com",
+  //key:    "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1",
+  //token:  "573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07",
   //debug:  true,
 
   agent: {
@@ -38,17 +44,17 @@ app.use(tml.init({
     }
   },
 
-  cache: {
-    adapter: "memcache",
-    hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
-    namespace: "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1"
-  }
-
   //cache: {
   //  adapter: "memcache",
-  //  hosts: ["localhost:11211"],
+  //  hosts: ["tememcached.yptuob.cfg.usw1.cache.amazonaws.com:11211"],
   //  namespace: "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1"
   //}
+
+  cache: {
+    adapter: "memcache",
+    hosts: ["localhost:11211"],
+    namespace: "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1"
+  }
 
   //current_locale: 'fr',
   //current_locale: function(request) {

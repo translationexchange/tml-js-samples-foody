@@ -12,13 +12,13 @@ block content
                   h2 !{ tr(recipe.name) }
                   if recipe.preparation
                     h5 !{ tr("Preparation") }
-                    p!= trh(recipe.preparation)
+                    p!= tr(recipe.preparation)
                     hr
                   h5 !{ tr("Directions") }
                   ol
                     each dir in recipe.directions
                       li
-                        p!= trh(dir)
+                        p!= tr(dir)
               .col-sm-5.col-lg-offset-1
                 .panel.panel-default
                   img.img-responsive(src='#{recipe.image}')
