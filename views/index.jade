@@ -1,6 +1,14 @@
 extends layout
 
+
+
 block content
+
+  style.
+    .jumbotron {
+       background: url('/images/heros/!{ Math.floor(Math.random() * (1 - 19) + 19) }.jpg') center center no-repeat !important;
+    }
+
   .jumbotron.text-center
     .container
       h1 !{ tr("The Best in International Food") }

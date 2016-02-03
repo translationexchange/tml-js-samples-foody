@@ -23,22 +23,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(tml.init({
-  host:   "https://staging-api.translationexchange.com",
+  //host:   "https://staging-api.translationexchange.com",
   key:    "b8206d1b982a5410f34da48490d7653fe25266f16c70482ccc953fb7264547d1",
   token:  "573d1cb5d207b439abdcf1cad8ff76c56b00c275fa032a69f748b34c82613e07",
-  debug:  true,
+  //debug:  true,
 
   //host:   "http://localhost:3000",
-  //key:    "05afee35f0450c8a5ca5fe4d29e207324b1cf5ac423e909b6f0f980976b95bff",
-  //token:  "41e7258f4e31f3869ea0c153b77aaee9fa723328c9d5ea566c97ae591e4a1567",
+  //key:    "c5d1005ced6df79cd2f7e78410134a68ec5546812013518a02402cfba1797eba",
+  //token:  "a7277114dd64a91e3ae0b5cdb4f9ef5ad78c5eee85d511465ab08edd0cb8ab5c",
 
-  agent: {
-    enabled:  true,
-    type:     "agent",
-    //host:     "http://localhost:8282/dist/agent.js",
-    host:     "https://staging-tools.translationexchange.com/agent/agent.min.js",
-    cache:    100
-  }
+  //agent: {
+  //  host:     "http://localhost:8282/dist/agent.js"
+  //  //host:     "https://tools.translationexchange.com/agent/stable/agent.min.js",
+  //  //cache:    100
+  //}
 
   //cache: {
   //  adapter: "memcache",
